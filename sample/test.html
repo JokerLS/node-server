@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <img src="https://p.qpic.cn/qqcourse/QFzQYCgCrxnWvLhjH8cibtdWOhTxhgT1o9FaPu8qQCkLh8KAuK7jma0kibF9nB2Lgn/" alt="">
+    <form action="/search" method="POST">
+        <input type="text" name="username" placeholder="suername">
+        <input type="text" name="password" placeholder="password">
+        <input type="submit" value="search">
+    </form>
+    <script>
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', 'getWeather?city=guangzhou', true)
+        xhr.send()
+        xhr.onload = function() {
+            console.log(JOSN.parse(xhr.responseText))
+        }
+    </script>
+</body>
+</html>
