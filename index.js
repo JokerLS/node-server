@@ -8,7 +8,7 @@ http.createServer(function(req,res) {
 
     switch(pathObj.pathname) {
         case '/getWeather':
-            var ret
+            var ret            
             if(pathObj.query.city == 'guangzhou') {
                 ret = {
                     city: 'guangzhou',
@@ -20,6 +20,7 @@ http.createServer(function(req,res) {
                     weather: 'unknow'
                 }
             }
+            res.setHeader('Access-Control-Allow-Origin','*')
             res.end(JSON.stringify(ret))
             break;
         case '/user/Lan':
